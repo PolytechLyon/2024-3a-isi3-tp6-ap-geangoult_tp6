@@ -6,6 +6,8 @@ import java.util.Random;
  * A clock used to synchronize simulations.
  */
 public class Clock {
+
+    private static Clock instance;
     private final int time = new Random().nextInt(25);
 
     /**
@@ -13,5 +15,17 @@ public class Clock {
      */
     public int getTime() {
         return this.time;
+    }
+
+    private Clock()
+    {
+
+    }
+
+    public static Clock getInstance() {
+        if (instance == null) {
+            instance = new Clock();
+        }
+        return instance;
     }
 }

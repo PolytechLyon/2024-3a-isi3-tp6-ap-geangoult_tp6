@@ -16,4 +16,14 @@ public abstract class NamedLogger implements Logger {
         this.name = name;
     }
 
+    @Override
+    public void log(String format, Object... args) {
+        String entry = String.format(format, args);
+        logMethod(String.format("%s\t%s\n", this.name, entry));
+    }
+
+    public abstract void logMethod(String message);
+
+
+
 }
