@@ -20,6 +20,9 @@ une instance avec un new Clock(), on passe le constructeur de Clock en private.
 
 ## Exercices 4
 
+Non, les classes Bike et Wheel ne sont pas dans le même paquetage.
+La dépendance est que Wheel a besoin de Bike pour calculer la vitesse, car elle utilise la fonctionnalité getPush() de Bike
+Oui, il y a déjà une abstraction : Vehicle implémente getPush() et se trouve dans le paquetage fr.polytech.sim.transport, qui est le même que celui de Wheel
 
 
 ## Exercices 5
